@@ -1,5 +1,5 @@
 
-##Kartojam
+## Kartojam
 
 1. Parašyti programą, kuri nuskaito įvestą skaičių ir patikrina ar jis yra lyginis ar nelyginis.
 
@@ -151,7 +151,7 @@ Console.WriteLine($"{skaicius1} {operacija} {skaicius2} = {rezultatas}");
 Console.ReadLine();
 ```
 
-##Nauja tema
+## Nauja tema
 
 1. Parašyti programą naudojant `while` ciklą, kuri nuskaitinėja įvestus skaičius tol, kol jų suma nėra daugiau 50.
 
