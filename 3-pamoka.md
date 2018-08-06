@@ -1,3 +1,66 @@
+## Kartojam
+
+1. Parašyti programą naudojant for ciklą, kuri prašo įvesti piramidės aukštį ir atspausdina skaičių piramidę tokiu formatu:
+
+```
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+```
+
+```c#
+Console.Write("Iveskite eiluciu skaiciu: ");
+var eiluciuSk = int.Parse(Console.ReadLine());
+int isvedamasSkaicius = 1;
+
+//einame per eilutes ir spausdiname skaicius
+for (var i = 1; i <= eiluciuSk; i++)
+{
+    //eiluteje esanciu skaiciu turi buti ne daugiau nei eilutes nr (i)
+    for (var j = 1; j <= i; j++)
+    {
+        Console.Write($"{isvedamasSkaicius} ");
+        //kaskarta isvede skaiciu, ji padidiname
+        isvedamasSkaicius++;
+    }
+
+    Console.Write("\n");
+}
+
+Console.ReadLine();
+```
+
+2. Apibrėžti ir priskirti reikšmes dvimačiam `bool` masyvui, kuris turi 4 eilutes ir 7 stulpelius ir atspausdinti jį ekrane tokiu formatu:
+
+```
+---*---
+--*-*--
+-*-*-*-
+*-*-*-*
+```
+(Jei elemento reikšmė `true` - tai `*`, jei `false`, tai `-`).
+
+```c#
+bool[,] manoMasyvas = new bool[4, 7] 
+{
+    { false, false, false, true, false, false, false },
+    { false, false, true, false, true, false, false },
+    { false, true, false, true, false, true, false },
+    { true, false, true, false, true, false, true}
+};
+
+for (int i = 0; i < 4; i++){
+    for (int j = 0; j < 7; j++)
+    {
+        Console.Write($"{(manoMasyvas[i,j] ? "*": "-")}");
+    }
+    Console.WriteLine();
+}
+
+Console.ReadLine();
+```
+
 ## Metodai
 
 1. Parašykite metodą `Pasisveikink`.
